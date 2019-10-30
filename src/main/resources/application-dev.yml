@@ -1,0 +1,42 @@
+server:
+  port: 9099
+spring:
+  datasource:
+    druid:
+      stat-view-servlet:
+        login-username: admin
+        login-password: 123456
+    dynamic:
+      primary: base
+      datasource:
+        base:
+          driver-class-name: com.mysql.jdbc.Driver
+          url: jdbc:mysql://localhost:3306/jiaxini?characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai&zeroDateTimeBehavior=convertToNull
+          username: ENC(2a40nDLH04pXkZ6rNfuxww==)
+          password: ENC(Y8aT+UfMv5WHwS6/Sqy9ZD9iHwwT7GWF)
+        queto:
+          driver-class-name: com.mysql.jdbc.Driver
+          url: jdbc:mysql://localhost:3306/jiaganni?characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai&zeroDateTimeBehavior=convertToNull
+          username: ENC(2a40nDLH04pXkZ6rNfuxww==)
+          password: ENC(Y8aT+UfMv5WHwS6/Sqy9ZD9iHwwT7GWF)
+  autoconfigure:
+    exclude: com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure
+
+  redis:
+    host: 101.132.123.185
+    port: 6379
+    database: 0
+    password: 123456
+    timeout: 5000
+
+  rabbitmq:
+    host: 101.132.123.185
+    port: 5672
+    username: guest
+    password: guest
+
+
+jasypt:
+  encryptor:
+    password: e9fbdb2d3b21     #算法加盐
+    algorithm: PBEWithMD5AndDES    #算法

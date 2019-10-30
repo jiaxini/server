@@ -1,0 +1,21 @@
+
+spring:
+  profiles:
+    active: dev
+  aop:
+    proxy-target-class: true
+  mail:
+    host: smtp.qq.com
+    username: nagasirened@163.com
+    password: 413anan      # \u5B9E\u9645\u4E0A\u662F\u90AE\u7BB1\u91CC\u9762\u7684\u8BBE\u7F6E
+    default-encoding: UTF-8
+
+mybatis-plus:
+  mapper-locations: classpath*:xml/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true  # \u9A7C\u5CF0
+  global-config:
+    db-config:
+      id-type: auto       # \u6CA1\u6709\u5355\u72EC\u914D\u7F6E@TableId\u7684type\u7684\uFF0C\u81EA\u52A8\u5C31\u662F IdType.AUTO \u7C7B\u578B
+      table-prefix: j_    #\u5168\u5C40\u7684\u8868\u524D\u7F00\u914D\u7F6E \u5BF9\u8C61\u662FEmployee \uFF0C\u8868\u5C31\u662F j_employee
