@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.service.jiaxini.dao.GoodsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.service.jiaxini.po.Goods">
+        <id column="id" property="id" />
+        <result column="goods_type_id" property="goodsTypeId" />
+        <result column="brand_id" property="brandId" />
+        <result column="product_no" property="productNo" />
+        <result column="name" property="name" />
+        <result column="price" property="price" />
+        <result column="synopsis" property="synopsis" />
+        <result column="is_on_sale" property="isOnSale" />
+        <result column="sale_price" property="salePrice" />
+        <result column="surport" property="surport" />
+        <result column="image_address" property="imageAddress" />
+        <result column="goods_stock" property="goodsStock" />
+        <result column="warn_stock" property="warnStock" />
+        <result column="issale" property="issale" />
+        <result column="is_new" property="isNew" />
+        <result column="is_hot" property="isHot" />
+        <result column="seo_keys" property="seoKeys" />
+        <result column="view_num" property="viewNum" />
+        <result column="appraise_num" property="appraiseNum" />
+        <result column="sort" property="sort" />
+        <result column="sale_number" property="saleNumber" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, goods_type_id, brand_id, product_no, name, price, synopsis, is_on_sale, sale_price, surport, image_address, goods_stock, warn_stock, issale, is_new, is_hot, seo_keys, view_num, appraise_num, sort, sale_number, create_time, update_time
+    </sql>
+
+</mapper>

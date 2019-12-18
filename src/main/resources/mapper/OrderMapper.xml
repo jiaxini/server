@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.service.jiaxini.dao.OrderMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.service.jiaxini.po.Order">
+        <id column="id" property="id" />
+        <result column="order_no" property="orderNo" />
+        <result column="emp_id" property="empId" />
+        <result column="order_status" property="orderStatus" />
+        <result column="order_money" property="orderMoney" />
+        <result column="deliver_money" property="deliverMoney" />
+        <result column="total_money" property="totalMoney" />
+        <result column="real_total_money" property="realTotalMoney" />
+        <result column="pay_type" property="payType" />
+        <result column="is_pay" property="isPay" />
+        <result column="receiver_name" property="receiverName" />
+        <result column="receiver_address" property="receiverAddress" />
+        <result column="receiver_phone" property="receiverPhone" />
+        <result column="order_score" property="orderScore" />
+        <result column="remark" property="remark" />
+        <result column="is_refund" property="isRefund" />
+        <result column="is_discuss" property="isDiscuss" />
+        <result column="cancel_reason" property="cancelReason" />
+        <result column="reject_reason" property="rejectReason" />
+        <result column="create_time" property="createTime" />
+        <result column="finish_time" property="finishTime" />
+        <result column="delivery_time" property="deliveryTime" />
+        <result column="receive_time" property="receiveTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, order_no, emp_id, order_status, order_money, deliver_money, total_money, real_total_money, pay_type, is_pay, receiver_name, receiver_address, receiver_phone, order_score, remark, is_refund, is_discuss, cancel_reason, reject_reason, create_time, finish_time, delivery_time, receive_time
+    </sql>
+
+</mapper>

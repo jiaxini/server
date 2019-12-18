@@ -1,6 +1,5 @@
 package com.service.jiaxini.util;
 
-import com.service.jiaxini.po.Employee;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -86,11 +85,11 @@ public class JwtTokenUtil {
      * @param token       客户端传入的token
      * @param employee 从数据库中查询出来的用户信息
      */
-    public boolean validateToken(String token, Employee employee) {
+    /*public boolean validateToken(String token, Employee employee) {
         String username = getUserNameFromToken(token);
         return username.equals(employee.getLoginName())
                 && !isTokenExpired(token);
-    }
+    }*/
 
     /**
      * 判断token是否已经失效
@@ -111,12 +110,12 @@ public class JwtTokenUtil {
     /**
      * 根据用户信息生成token
      */
-    public String generateToken(Employee employee) {
+    /*public String generateToken(Employee employee) {
         Map<String, Object> claims = new HashMap<>();
         claims.put(CLAIM_KEY_USERNAME, employee.getLoginName());
         claims.put(CLAIM_KEY_CREATED, new Date());
         return generateToken(claims);
-    }
+    }*/
 
     /**
      * 判断token是否可以被刷新

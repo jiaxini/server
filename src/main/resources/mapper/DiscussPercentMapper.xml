@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.service.jiaxini.dao.DiscussPercentMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.service.jiaxini.po.DiscussPercent">
+        <id column="id" property="id" />
+        <result column="discuss_id" property="discussId" />
+        <result column="good_id" property="goodId" />
+        <result column="well_percent" property="wellPercent" />
+        <result column="middle_percent" property="middlePercent" />
+        <result column="negative_percent" property="negativePercent" />
+        <result column="star_num" property="starNum" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, discuss_id, good_id, well_percent, middle_percent, negative_percent, star_num
+    </sql>
+
+</mapper>

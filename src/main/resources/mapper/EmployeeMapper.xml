@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.service.jiaxini.dao.EmployeeMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.service.jiaxini.po.Employee">
+        <id column="id" property="id" />
+        <result column="user_name" property="userName" />
+        <result column="login_name" property="loginName" />
+        <result column="password" property="password" />
+        <result column="telphone" property="telphone" />
+        <result column="email" property="email" />
+        <result column="sex" property="sex" />
+        <result column="birth" property="birth" />
+        <result column="status" property="status" />
+        <result column="vip" property="vip" />
+        <result column="score" property="score" />
+        <result column="surplus" property="surplus" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="role_type" property="roleType" />
+        <result column="head_image" property="headImage" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, user_name, login_name, password, telphone, email, sex, birth, status, vip, score, surplus, create_time, update_time, role_type, head_image
+    </sql>
+
+</mapper>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.service.jiaxini.dao.DiscussMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.service.jiaxini.po.Discuss">
+        <id column="id" property="id" />
+        <result column="context" property="context" />
+        <result column="dis_level" property="disLevel" />
+        <result column="good_id" property="goodId" />
+        <result column="order_id" property="orderId" />
+        <result column="is_anonymous" property="isAnonymous" />
+        <result column="dis_image" property="disImage" />
+        <result column="is_first" property="isFirst" />
+        <result column="parent_id" property="parentId" />
+        <result column="create_time" property="createTime" />
+        <result column="lables" property="lables" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, context, dis_level, good_id, order_id, is_anonymous, dis_image, is_first, parent_id, create_time, lables
+    </sql>
+
+</mapper>

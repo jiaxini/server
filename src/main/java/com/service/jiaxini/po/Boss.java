@@ -1,6 +1,5 @@
 package com.service.jiaxini.po;
 
-import java.math.BigDecimal;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
@@ -14,7 +13,7 @@ import java.util.Date;
 
 /**
  * <p>
- * 用户表
+ * 店主信息表
  * </p>
  *
  * @author zengguangfu
@@ -22,8 +21,8 @@ import java.util.Date;
  */
 @Builder
 @Data
-@TableName("j_employee")
-public class Employee extends Model<Employee> {
+@TableName("j_boss")
+public class Boss extends Model<Boss> {
 
     private static final long serialVersionUID=1L;
 
@@ -34,59 +33,39 @@ public class Employee extends Model<Employee> {
     private Long id;
 
     /**
-     * 用户名
+     * 店主用户主键
      */
-    private String userName;
+    private Long bossId;
 
     /**
-     * 登录名
+     * 店主姓名
      */
-    private String loginName;
+    private String bossName;
 
     /**
-     * 密码
+     * 店主地址
      */
-    private String password;
+    private String bossAddress;
 
     /**
-     * 手机号
+     * 店主联系方式
      */
-    private String telphone;
+    private String bossPhone;
 
     /**
-     * 邮箱
+     * 证件类型
      */
-    private String email;
+    private Integer identityType;
 
     /**
-     * 男0  女1
+     * 证件号码
      */
-    private Integer sex;
+    private String identityNum;
 
     /**
-     * 生日
-     */
-    private Date birth;
-
-    /**
-     * 0 正常 1 锁定 2 删除 3 冻结
+     * 账号状态
      */
     private Integer status;
-
-    /**
-     * 0 普通 1 1级会员 2 2级会员 ...
-     */
-    private Integer vip;
-
-    /**
-     * 积分
-     */
-    private BigDecimal score;
-
-    /**
-     * 用户余额
-     */
-    private BigDecimal surplus;
 
     /**
      * 创建时间
@@ -94,18 +73,8 @@ public class Employee extends Model<Employee> {
     private Date createTime;
 
     /**
-     * 修改时间
+     * 更新时间
      */
     private Date updateTime;
-
-    /**
-     * 0 买家，1卖家
-     */
-    private Integer roleType;
-
-    /**
-     * 头像
-     */
-    private String headImage;
 
 }

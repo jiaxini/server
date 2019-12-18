@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.service.jiaxini.dao.GoodTypeMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.service.jiaxini.po.GoodType">
+        <id column="id" property="id" />
+        <result column="parent_id" property="parentId" />
+        <result column="type_name" property="typeName" />
+        <result column="hole_name" property="holeName" />
+        <result column="sort" property="sort" />
+        <result column="is_delete" property="isDelete" />
+        <result column="create_time" property="createTime" />
+        <result column="is_show" property="isShow" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, parent_id, type_name, hole_name, sort, is_delete, create_time, is_show
+    </sql>
+
+</mapper>

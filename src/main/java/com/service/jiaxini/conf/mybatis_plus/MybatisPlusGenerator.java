@@ -48,12 +48,13 @@ public class MybatisPlusGenerator {
         strategyConfig.setTablePrefix("j_")
                 .setNaming(NamingStrategy.underline_to_camel)    // 下划线转驼峰
                 //.setVersionFieldName("")      // 没有引入乐观锁插件，不需要这个
-                .setInclude("e_role")           // TODO 写入要生成代码的表的名字
+                .setInclude("j_address","j_boss","j_brand","j_discuss","j_discuss_percent"
+                        ,"j_employee","j_good_detail","j_good_type","j_goods","j_order","j_product_boss")           // TODO 写入要生成代码的表的名字
         ;
 
         // 4.包配置
         PackageConfig packageConfig = new PackageConfig();
-        packageConfig.setParent("com.service.jiaxi")
+        packageConfig.setParent("com.service.jiaxini")
                 .setMapper("dao")
                 .setService("service")
                 .setServiceImpl("service.impl")
