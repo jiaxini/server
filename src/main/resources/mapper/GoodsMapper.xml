@@ -27,11 +27,21 @@
         <result column="sale_number" property="saleNumber" />
         <result column="create_time" property="createTime" />
         <result column="update_time" property="updateTime" />
+        <result column="create_login_name" property="createLoginName" />
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        id, goods_type_id, brand_id, product_no, name, price, synopsis, is_on_sale, sale_price, surport, image_address, goods_stock, warn_stock, issale, is_new, is_hot, seo_keys, view_num, appraise_num, sort, sale_number, create_time, update_time
+        id, goods_type_id, brand_id, product_no, `name`, price, synopsis, is_on_sale, sale_price,
+        surport, image_address, goods_stock, warn_stock, issale, is_new, is_hot, seo_keys,
+        view_num, appraise_num, sort, sale_number, create_time, update_time, create_login_name
     </sql>
+
+    <select id="judgeRepetByNoOrName" parameterType="com.service.jiaxini.expand.dto.GoodsNewDTO" resultType="long">
+        SELECT id FROM j_goods
+        WHERE create_login_name = #{createLoginName}
+        AND ( product_no = #{productNo} OR `name` = #{name} )
+        <if test="id != null"> AND id != #{id} </if>
+    </select>
 
 </mapper>

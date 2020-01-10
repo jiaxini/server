@@ -13,7 +13,7 @@ import java.util.Date;
 
 /**
  * <p>
- * 
+ * 商品分类
  * </p>
  *
  * @author zengguangfu

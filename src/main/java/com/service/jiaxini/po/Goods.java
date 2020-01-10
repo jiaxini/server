@@ -5,11 +5,13 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.service.jiaxini.expand.param.SaveGoodsParam;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.beans.BeanUtils;
 
-import java.time.LocalDateTime;
-import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -23,6 +25,8 @@ import java.util.Date;
 @Builder
 @Data
 @TableName("j_goods")
+@NoArgsConstructor
+@AllArgsConstructor
 public class Goods extends Model<Goods> {
 
     private static final long serialVersionUID=1L;
@@ -143,4 +147,12 @@ public class Goods extends Model<Goods> {
      */
     private Date updateTime;
 
+    /**
+     * 创建者账号
+     */
+    private String createLoginName;
+
+    public Goods(SaveGoodsParam param){
+        BeanUtils.copyProperties(param, this);
+    }
 }

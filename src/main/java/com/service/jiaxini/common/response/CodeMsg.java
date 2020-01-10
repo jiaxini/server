@@ -14,13 +14,14 @@ public class CodeMsg {
     private Integer code;
     private String msg;
 
-    public static final CodeMsg SUCCESS = new CodeMsg(200 , "SUCCESS");
+    public static final CodeMsg SUCCESS = new CodeMsg(0 , "SUCCESS");
 
     public static final CodeMsg CUSTOM_ERROR = new CodeMsg(600, "%s");
 
     public static final CodeMsg SERVER_ERROR = new CodeMsg(500001 , "服务器异常");
-    public static final CodeMsg OPERATION_FAILD = new CodeMsg(500001 , "操作失败");
+    public static final CodeMsg OPERATION_FAILD = new CodeMsg(500002 , "操作失败");
     public static CodeMsg REQUEST_ILLEGLE = new CodeMsg(500103, "请求异常");
+    public static final CodeMsg PARAM_NOT_NULL = new CodeMsg(500104, "参数不能为空");
     public static CodeMsg VALIDATION_ERROR = new CodeMsg(500101, "参数校验异常：%s");
     public static CodeMsg RUNTIME_ERROR = new CodeMsg(500105, "运行时异常：%s");
 
@@ -35,6 +36,10 @@ public class CodeMsg {
     public static CodeMsg TEAM_ERROR = new CodeMsg(600001, "登录用户同盟与操作数据不符");
     public static CodeMsg NOT_LEADER = new CodeMsg(600002, "无权操作");
     public static CodeMsg NO_AUTH = new CodeMsg(600003, "无权操作");
+
+    // 商品相关
+    public static CodeMsg GOODS_REPET = new CodeMsg(100001, "您已存在同样商品，请检查商品名或商品编号");
+    public static CodeMsg DELETE_GOODS_ERROR = new CodeMsg(100002, "移除商品失败");
 
     public CodeMsg fillMsg(String... args){
         int code = this.code;

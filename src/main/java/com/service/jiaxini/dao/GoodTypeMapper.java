@@ -1,7 +1,10 @@
 package com.service.jiaxini.dao;
 
+import com.service.jiaxini.expand.vo.GoodsTypeVO;
 import com.service.jiaxini.po.GoodType;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +16,5 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 public interface GoodTypeMapper extends BaseMapper<GoodType> {
 
+    List<GoodsTypeVO> getTree();
 }

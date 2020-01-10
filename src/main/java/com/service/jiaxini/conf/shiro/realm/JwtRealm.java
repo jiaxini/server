@@ -1,7 +1,5 @@
 package com.service.jiaxini.conf.shiro.realm;
 
-import com.service.jiaxini.conf.response.CodeMsg;
-import com.service.jiaxini.conf.response.GlobalException;
 import com.service.jiaxini.po.Employee;
 import com.service.jiaxini.util.JwtTokenUtil;
 import org.apache.commons.lang3.StringUtils;

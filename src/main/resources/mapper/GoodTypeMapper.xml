@@ -18,5 +18,13 @@
     <sql id="Base_Column_List">
         id, parent_id, type_name, hole_name, sort, is_delete, create_time, is_show
     </sql>
+    
+    <resultMap id="TypeTree" type="com.service.jiaxini.expand.vo.GoodsTypeVO">
+
+    </resultMap>
+
+    <select id="getTree" resultMap="TypeTree">
+
+    </select>
 
 </mapper>

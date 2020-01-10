@@ -28,9 +28,6 @@ public class ResultBody<T> implements Serializable {
     }
 
     public ResultBody(CodeMsg codeMsg){
-        if (Objects.isNull(codeMsg)){
-            return;
-        }
         this.code = codeMsg.getCode();
         this.msg = codeMsg.getMsg();
     }
@@ -40,7 +37,7 @@ public class ResultBody<T> implements Serializable {
     }
 
     public static <T> ResultBody<T> success(){
-        return new ResultBody();
+        return new ResultBody(CodeMsg.SUCCESS);
     }
 
     public static ResultBody error(CodeMsg codeMsg){
