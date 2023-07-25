@@ -139,7 +139,7 @@
         <dependency>
             <groupId>org.apache.shiro</groupId>
             <artifactId>shiro-web</artifactId>
-            <version>1.2.3</version>
+            <version>1.12.0</version>
         </dependency>
 
         <!-- shiro-redis开源项目已经很好的将shiro与redis整合到一起，实现了将session存入redis，可以方便的用于session共享实现集群部署。 -->
